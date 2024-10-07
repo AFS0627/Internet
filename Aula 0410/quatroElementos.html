@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posicionamento</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+        }
+        .top-left {
+            background-color: red;
+            top: 0;
+            left: 0;
+        }
+        .top-right {
+            background-color: purple;
+            top: 0;
+            right: 0;
+        }
+        .bottom-left {
+            background-color: green;
+            bottom: 0;
+            left: 0;
+        }
+        .bottom-right {
+            background-color: yellow;
+            bottom: 0;
+            right: 0;
+        }
+        .center {
+            background-color: gray;
+            width: 150px;
+            height: 150px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="box top-left">Esquerda em Cima</div>
+    <div class="box top-right">Direita em Cima</div>
+    <div class="box bottom-left">Esquerda em Baixo</div>
+    <div class="box bottom-right">Direita em Baixo</div>
+    <div class="box center">Centro</div>
+</body>
+</html>
