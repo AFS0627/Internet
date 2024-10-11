@@ -1,0 +1,54 @@
+1) Jogue todos níveis do flex frog  explique todos os níveis.
+1- justify-content define o alinhamento dos itens ao longo do eixo principal o end alinha ao final
+
+2- justify-content com o valor center alinha os itens no centro
+
+3- distribui os sapos com espaçamento igual ao redor de cada um
+
+4- são distribuídos espaço igual entre eles o primeiro sapo encosta na borda esquerda e o último encosta na borda direita
+
+5- align-items alinha os itens flex-end os empurra para o final
+
+6- align-items: center; justify-content: center; são alinhados horizontalmente e verticalmente
+
+7- são distribuídos uniformemente com espaço igual ao redor de cada um.
+
+8- eixo é invertido, então os sapos são postos da direita para a esquerda.
+
+9- eixo agora é vertical, então os sapos são postos de cima para baixo.
+
+10- são dispostos da direita para a esquerda e são empurrados para o final no eixo invertido
+
+11- são dispostos de cima para baixo e empurrados para o final
+
+12- são dispostos de baixo para cima espaço igual entre o primeiro e o último sapo e as bordas
+
+13- postos da direita para a esquerda, centralizados horizontalmente, e alinhados ao final do eixo
+
+14- order especifica a posição relativa dos itens, e o valor 1 coloca o sapo verde depois dos outros
+
+15- é movido para uma posição anterior aos outros, já que o valor de order negativo tem prioridade
+
+16- align-self permite ajustar o alinhamento de um item individualmente, ignorando o align-items do contêiner
+
+17-  é alinhado ao final do contêiner no eixo vertical, e sua ordem é definida como 1, movendo-o para o final dos outros sapos no eixo principal
+
+18- o flex-wrap faz com que os itens "quebrem" de linha se não houver espaço suficiente no contêiner
+
+19- são dispostos em uma coluna e podem quebrar para a próxima linha se não houver espaço suficiente
+
+20- flex-flow combina flex-direction e flex-wrap os sapos são dispostos em uma coluna e podem quebrar para a próxima linha
+
+21- Quando há mais de uma linha de sapos o align-content define o alinhamento das linhas
+
+22- As linhas de sapos são alinhadas ao final do eixo cruzado.
+
+23- sapos são dispostos de baixo para cima em colunas com as linhas de sapos centralizadas
+
+24- são dispostos em uma coluna invertida podem quebrar em várias linhas são centralizados no eixo principal e as linhas são espaçadas uniformemente no eixo cruzado.
+
+
+
+
+
+
