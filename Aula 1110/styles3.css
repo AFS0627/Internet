@@ -9,7 +9,6 @@ html, body {
     font-family: Arial, sans-serif;
 }
 
-/* A flex container ocupa a tela inteira */
 .flex-container {
     display: flex;
     width: 100vw;
@@ -29,7 +28,7 @@ html, body {
     object-fit: cover;
 }
 
-/* Efeito hover para aumentar horizontalmente */
+
 .flex-item:hover {
-    transform: scaleX(1.2);  /* Aumenta apenas horizontalmente */
+    transform: scaleX(1.2); 
 }
