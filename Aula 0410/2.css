@@ -22,7 +22,6 @@ body {
     animation: launch 5s ease-in-out infinite;
 }
 
-/* Foguete - Cone superior */
 .rocket::before {
     content: '';
     position: absolute;
