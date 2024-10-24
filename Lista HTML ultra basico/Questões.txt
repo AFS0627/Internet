@@ -1,0 +1,29 @@
+a)
+Internet: Rede global que conecta dispositivos.
+Web: Serviço da Internet que permite acessar páginas interligadas via navegadores.
+
+b)Usuário digita uma URL.
+Navegador resolve o nome em um IP.
+Conecta-se ao servidor.
+Envia uma requisição HTTP.
+Recebe a resposta (HTML).
+Renderiza a página.
+
+c)
+Elemento que estrutura o conteúdo de uma página, como <p> para parágrafos
+
+d)
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Título</title>
+</head>
+<body>
+    <h1>Título</h1>
+    <p>Texto.</p>
+</body>
+</html>
+
+e)Tags que descrevem o significado do conteúdo, como <header>, <footer>, <article>.
+
+f)<p>Visite <a href="https://www.google.com">este link</a>.</p>
