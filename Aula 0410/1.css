@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    width: 80%;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+}
+
+
+.sidebar {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    width: 30%;
+    float: left;
+    position: relative;
+}
+
+.profile-picture {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-picture img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.personal-info {
+    margin-top: 20px;
+}
+
+.personal-info h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.personal-info p {
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+.main-content {
+    width: 70%;
+    padding: 20px;
+    position: relative;
+}
+
+.main-content h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.main-content p {
+    margin-bottom: 20px;
+}
+
+.main-content h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.experience {
+    margin-top: 20px;
+}
+
+.job {
+    margin-bottom: 20px;
+}
+
+.job h3 {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.job p {
+    margin-bottom: 5px;
+    font-size: 0.9em;
+}
+
+.job ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    font-size: 0.9em;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .sidebar, .main-content {
+        width: 100%;
+    }
+
+    .profile-picture img {
+        width: 80px;
+        height: 80px;
+    }
+}

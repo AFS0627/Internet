@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(to top, #000, #001f3f);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+.rocket {
+    width: 50px;
+    height: 100px;
+    background-color: gray;
+    position: relative;
+    border-radius: 25px 25px 0 0;
+    animation: launch 5s ease-in-out infinite;
+}
+
+/* Foguete - Cone superior */
+.rocket::before {
+    content: '';
+    position: absolute;
+    top: -25px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 0;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-bottom: 25px solid gray;
+}
+
+.rocket::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: -15px;
+    width: 15px;
+    height: 30px;
+    background-color: orange;
+    border-radius: 10px;
+}
+
+.rocket::before,
+.rocket::after {
+    background-color: gray;
+}
+
+@keyframes launch {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100vh);
+    }
+}
