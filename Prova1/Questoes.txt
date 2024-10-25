@@ -5,7 +5,7 @@ Envia uma requisição HTTP.
 Recebe a resposta (HTML).
 Renderiza a página.
 
-2)Não! e aqui estão alguns motivos motivos 
+2)Não é
 -Sem logica de programação: html não inclui loops ou condicionais(if-else) ou funções etc.
 -Estruturação de conteudo: ele é projetado apenas para organizar e definir estrutura
 -sem manipulção de dados: HTML não é capaz de manipular dados
@@ -16,7 +16,7 @@ inline: é aplicado diretamente nas tags usando o atributo style é util para es
 interno: é inserido no proprio arquivo html dentro de uma tag<style> que fica no cabeçalho é usado quando se deseja aplicar estilos á uma unica pagina
 externo:é colocado em um arquivo separado com a extensão .css, e o arquivo html faz referencia a ele atravez de uma tag <link> no cabeçalho, permite reutilizar o mesmo estilo em varias paginas
 
-b)wsão usados para definir quais elementos html receberão os estilos especificados. Um seletor "seleciona" ou "aponta" para os elementos no documento, estilos definidos são aplicados
+b)são usados para definir quais elementos html receberão os estilos especificados. Um seletor "seleciona" ou "aponta" para os elementos no documento, estilos definidos são aplicados
 ex:
 -seletor de tipo
 p {
@@ -40,4 +40,3 @@ absolute: é posicionado conforme o elemento pai
 fixed: posicionado conforme a janela de visualização 
 sticky: combina relative e fixed
 
-4)
