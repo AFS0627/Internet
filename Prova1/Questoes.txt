@@ -1,0 +1,43 @@
+1)Usuário digita uma URL.
+Navegador resolve o nome em um IP.
+Conecta-se ao servidor.
+Envia uma requisição HTTP.
+Recebe a resposta (HTML).
+Renderiza a página.
+
+2)Não! e aqui estão alguns motivos motivos 
+-Sem logica de programação: html não inclui loops ou condicionais(if-else) ou funções etc.
+-Estruturação de conteudo: ele é projetado apenas para organizar e definir estrutura
+-sem manipulção de dados: HTML não é capaz de manipular dados
+-Depende do css e javaScript
+
+3)a)inline,interno e externo
+inline: é aplicado diretamente nas tags usando o atributo style é util para estilizar elementos especificos
+interno: é inserido no proprio arquivo html dentro de uma tag<style> que fica no cabeçalho é usado quando se deseja aplicar estilos á uma unica pagina
+externo:é colocado em um arquivo separado com a extensão .css, e o arquivo html faz referencia a ele atravez de uma tag <link> no cabeçalho, permite reutilizar o mesmo estilo em varias paginas
+
+b)wsão usados para definir quais elementos html receberão os estilos especificados. Um seletor "seleciona" ou "aponta" para os elementos no documento, estilos definidos são aplicados
+ex:
+-seletor de tipo
+p {
+    color: blue;
+
+}
+-seletor de classe
+.button{
+    background-color: green;
+    color: white;
+}
+-seletor de id 
+#menu{
+    background-color: gray;
+}
+
+c)As mais comuns são: static, relative, absolute, fixed e sticky
+static: posicionados conforme a ordem natural
+relative:é possivel ajustar sua posição relativa a um ponto
+absolute: é posicionado conforme o elemento pai 
+fixed: posicionado conforme a janela de visualização 
+sticky: combina relative e fixed
+
+4)
