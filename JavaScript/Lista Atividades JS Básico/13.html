@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>13</title>
+</head>
+<body>
+    <input type="tex" id="txt">
+    <button id="b" onclick="c()">Copiar</button>
+    <div id="par"></div>
+    <script>
+        let txt = document.querySelector("#txt");
+        let par = document.querySelector("#par");
+
+        function c(){
+            par.innerHTML += txt.value+"<br>";
+        }
+        function c2(){
+            par.innerHTML += `<p> ${txt.value} </p>`;
+        }
+    </script>
+</body>
+</html>
