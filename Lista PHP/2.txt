@@ -1,0 +1,1 @@
+sim executado no servidror, diferente do javascript que é executado do lado cliente.
