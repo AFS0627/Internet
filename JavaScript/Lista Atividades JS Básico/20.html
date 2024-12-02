@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Questão 20</title>
+</head>
+<body>
+    <form onsubmit="calcularIMC(); return false;">
+        <label for="peso">Peso (kg):</label>
+        <input id="peso" type="number" step="0.1"><br>
+        <label for="altura">Altura (m):</label>
+        <input id="altura" type="number" step="0.01"><br>
+        <button type="submit">Calcular</button>
+    </form>
+    <p id="resultadoIMC"></p>
+    <script>
+        function calcularIMC() {
+            let peso = parseFloat(document.getElementById("peso").value);
+            let altura = parseFloat(document.getElementById("altura").value);
+            let imc = peso / (altura * altura);
+            let classificacao;
+
+            if (imc < 18.5) classificacao = "Abaixo do peso";
+            else if (imc < 25) classificacao = "Peso normal";
+            else if (imc < 30) classificacao = "Sobrepeso";
+            else classificacao = "Obesidade";
+
+            document.getElementById("resultadoIMC").innerText = `IMC: ${imc.toFixed(2)} (${classificacao})`;
+        }
+    </script>
+</body>
+</html>

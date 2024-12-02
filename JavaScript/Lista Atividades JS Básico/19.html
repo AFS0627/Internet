@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Questão 19</title>
+</head>
+<body>
+    <form onsubmit="return validarFormulario()">
+        <label for="nome">Nome:</label>
+        <input id="nome" type="text"><span id="erroNome" style="color: red;"></span><br>
+        <label for="email">E-mail:</label>
+        <input id="email" type="email"><span id="erroEmail" style="color: red;"></span><br>
+        <label for="senha">Senha:</label>
+        <input id="senha" type="password"><span id="erroSenha" style="color: red;"></span><br>
+        <button type="submit">Enviar</button>
+    </form>
+    <script>
+        function validarFormulario() {
+            let nome = document.getElementById("nome").value;
+            let email = document.getElementById("email").value;
+            let senha = document.getElementById("senha").value;
+            let valido = true;
+
+            if (nome.length <= 3) {
+                document.getElementById("erroNome").innerText = " Nome deve ter mais de 3 caracteres.";
+                valido = false;
+            } else {
+                document.getElementById("erroNome").innerText = "";
+            }
+
+            if (!email.includes("@")) {
+                document.getElementById("erroEmail").innerText = " E-mail inválido.";
+                valido = false;
+            } else {
+                document.getElementById("erroEmail").innerText = "";
+            }
+
+            if (senha.length <= 6) {
+                document.getElementById("erroSenha").innerText = " Senha deve ter mais de 6 caracteres.";
+                valido = false;
+            } else {
+                document.getElementById("erroSenha").innerText = "";
+            }
+
+            return valido;
+        }
+    </script>
+</body>
+</html>

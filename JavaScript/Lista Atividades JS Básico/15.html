@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Questão 15</title>
+</head>
+<body>
+    <input id="min" type="number" placeholder="Valor mínimo">
+    <input id="max" type="number" placeholder="Valor máximo">
+    <button onclick="gerarNumero()">Gerar Número</button>
+    <p id="resultado"></p>
+    <script>
+        function gerarNumero() {
+            let min = parseInt(document.getElementById("min").value);
+            let max = parseInt(document.getElementById("max").value);
+            let numeroAleatorio = Math.floor(Math.random() * (max - min + 1)) + min;
+            document.getElementById("resultado").innerText = `Número: ${numeroAleatorio}`;
+        }
+    </script>
+</body>
+</html>

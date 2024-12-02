@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Questão 18</title>
+</head>
+<body>
+    <div id="teclas" style="text-align: center; font-size: 24px;"></div>
+    <script>
+        document.body.addEventListener("keydown", (event) => {
+            let div = document.getElementById("teclas");
+            let novaTecla = document.createElement("span");
+            novaTecla.innerText = event.key + " ";
+            div.appendChild(novaTecla);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Questão 21</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        input, select, button {
+            margin: 10px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculadora Simples</h1>
+    <input id="numero1" type="number" placeholder="Número 1">
+    <select id="operacao">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <input id="numero2" type="number" placeholder="Número 2">
+    <button onclick="calcular()">Calcular</button>
+    <p id="resultado"></p>
+
+    <script>
+        function calcular() {
+            const numero1 = parseFloat(document.getElementById("numero1").value);
+            const operacao = document.getElementById("operacao").value;
+            const numero2 = parseFloat(document.getElementById("numero2").value);
+
+            let resultado;
+
+            switch (operacao) {
+                case "+":
+                    resultado = numero1 + numero2;
+                    break;
+                case "-":
+                    resultado = numero1 - numero2;
+                    break;
+                case "*":
+                    resultado = numero1 * numero2;
+                    break;
+                case "/":
+            
+                    resultado = numero1 / numero2;
+                    break;
+                default:
+
+            }
+
+            document.getElementById("resultado").innerText = `Resultado: ${resultado}`;
+        }
+    </script>
+</body>
+</html>
