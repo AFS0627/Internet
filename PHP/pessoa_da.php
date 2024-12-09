@@ -4,8 +4,9 @@ function insere_usuario($nome, $email){
 $db=connecta_db();
 $sql="INSERT INTO usuario (nome, email) values (?, ?)";
 $stmt=$db->prepare($sql);
-$stmt->bindValue(1,$nome, PDO::PARAM_STR);
-$stmt->bindValue(2,$email,PDO::PARAM_STR);
+$stmt->bindValue(1,$nome);
+$stmt->bindValue(2,$email);
+$stmt->execute();
 try{
     $stmt->execute();
     echo "Usuário inserido com sucesso!";
@@ -15,13 +16,15 @@ try{
 }
 $db=null;
 }
-function recuper_lista_usuarios() {
-    $bd=connecta_db();
-    $sql="select * from usuario"
-    $stmt = $bd->prepare($sql);
+function getUsuarios(){
+    $db =connecta_db();
+    $sql = "select * from usuario";
+    $stmt = $db->prepare($sql);
     $stmt->execute();
-    $resultado=$stmt->fetchAll(PDO::FETCH_ASSOC);
+    $resultado = $stmt->fetchALL(PDO::FETCH_ASSOC);
     var_dump($resultado);
+    return $resultado;
 }
-recuper_lista_usuarios();
+
+
 ?>
