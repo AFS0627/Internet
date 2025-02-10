@@ -1,0 +1,13 @@
+CREATE DATABASE IF NOT EXISTS prova;
+USE prova;
+
+CREATE TABLE IF NOT EXISTS usuario (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL,
+    idade VARCHAR(255) NOT NULL UNIQUE,
+    usuario VARCHAR(50) NOT NULL UNIQUE,
+    senha VARCHAR(255) NOT NULL
+);
+
+-- Inserindo dados iniciais
+
