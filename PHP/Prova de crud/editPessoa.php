@@ -1,10 +1,10 @@
 <?php 
     include_once("Database.php");
     include_once("PessoaDAO.php");
-
+// pra buscar um usuario especifico
     if (isset($_GET["pessoa_id"])) {
         $id2 = $_GET["pessoa_id"];
-        $pessoa = getUsuarioById($id2); // Alterado para getUsuarioById
+        $pessoa = getUsuarioById($id2); 
     } else {
         die("Pessoa não encontrada");
     }
@@ -23,75 +23,86 @@
             align-items: center;
             min-height: 100vh;
             margin: 0;
-            background-color: white;
-            font-family: Arial, sans-serif;
+            background-color: #e6f3ff; 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         h2 {
             text-align: center;
-            font-size: 1.8em;
-            font-weight: bold;
+            font-size: 2em;
+            color: #333;
+            margin-bottom: 30px;
         }
 
         fieldset {
             width: 100%;
             max-width: 500px;
-            padding: 20px;
-            border: 2px solid #ccc;
-            border-radius: 8px;
+            padding: 30px;
+            border: none;
+            border-radius: 15px;
             background-color: white;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         legend {
-            font-size: 1.5em;
+            font-size: 1.6em;
             font-weight: bold;
-            margin-bottom: 10px;
+            color: #0056b3;
+            margin-bottom: 20px;
         }
 
         label {
             display: block;
-            margin-bottom: 8px;
-            font-size: 1em;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+            color: #333;
         }
 
         input[type="text"],
         input[type="number"],
         input[type="password"] {
             width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
             font-size: 1em;
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus,
+        input[type="number"]:focus,
+        input[type="password"]:focus {
+            border-color: #007BFF;
+            outline: none;
         }
 
         input[type="submit"], .delete-btn {
             width: 100%;
-            padding: 12px;
+            padding: 15px;
             color: white;
             border: none;
-            border-radius: 4px;
+            border-radius: 6px;
             font-size: 1.2em;
             cursor: pointer;
             transition: background-color 0.3s;
         }
 
         input[type="submit"] {
-            background-color: blue;
+            background-color: #007BFF;
+            margin-bottom: 10px;
         }
 
         input[type="submit"]:hover {
-            background-color: darkblue;
+            background-color: #0056b3;
         }
 
         .delete-btn {
-            background-color: red;
-            margin-top: 10px;
+            background-color: #FF4136;
         }
 
         .delete-btn:hover {
-            background-color: darkred;
+            background-color: #D50F00;
         }
     </style>
 </head>
@@ -101,20 +112,20 @@
 <form action="pessoaControle.php" method="post">
     <input type="hidden" name="id" value="<?php echo htmlspecialchars($pessoa['id']); ?>">
 
-    <label for="nome">Nome: </label>
+    <label for="nome">Nome:</label>
     <input type="text" name="nome" value="<?php echo htmlspecialchars($pessoa['nome']); ?>" required>
 
-    <label for="idade">Idade: </label>
+    <label for="idade">Idade:</label>
     <input type="number" name="idade" value="<?php echo htmlspecialchars($pessoa['idade']); ?>" required>
 
-    <label for="cpf">CPF: </label>
+    <label for="cpf">CPF:</label>
     <input type="text" name="cpf" value="<?php echo htmlspecialchars($pessoa['cpf']); ?>" required>
 
-    <label for="senha">Senha: </label>
+    <label for="senha">Senha:</label>
     <input type="password" name="senha" value="<?php echo htmlspecialchars($pessoa['senha']); ?>" required>
 
     <input type="hidden" name="acao" value="editar">
-    <input type="submit" value="Salvar alterações">
+    <input type="submit" value="Salvar Alterações">
     
     <button type="submit" name="acao" value="delete" class="delete-btn">Excluir Usuário</button>
 </form>

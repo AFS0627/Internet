@@ -3,76 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>cadastro</title>
-</head>
-<style>
+    <title>Cadastro</title>
+    <style>
         body {
             display: flex;
             justify-content: center; 
             align-items: center; 
             min-height: 100vh; 
             margin: 0;
-            background-color:white;
-            font-family: Arial, sans-serif;
+            background-color: #f0f8ff; 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
-        
         form {
             width: 100%;
             max-width: 400px; 
-            padding: 20px;
-            border: 2px solid #ccc;
-            border-radius: 8px;
-            background-color: white;
-            box-shadow: 0 2px 10px black;
+            padding: 30px;
+            border: none;
+            border-radius: 15px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
 
-        /* Estilo para os rótulos e inputs */
         label {
             display: block;
-            margin-bottom: 8px;
-            font-size: 1em;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+            color: #333;
         }
 
         input[type="text"],
-        input[type="idade"],
+        input[type="number"], 
         input[type="password"] {
             width: 100%; 
-            padding: 10px;
-            margin-bottom: 15px; 
-            border: 1px solid #ccc;
-            border-radius: 4px;
+            padding: 12px;
+            margin-bottom: 20px; 
+            border: 1px solid #ddd;
+            border-radius: 6px;
             font-size: 1em;
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus,
+        input[type="number"]:focus,
+        input[type="password"]:focus {
+            border-color: #007BFF;
+            outline: none;
         }
 
         input[type="submit"] {
             width: 100%; 
-            padding: 12px;
-            background-color:blue;
+            padding: 15px;
+            background-color: #007BFF;
             color: white;
             border: none;
-            border-radius: 4px;
+            border-radius: 6px;
             font-size: 1.2em;
             cursor: pointer;
             transition: background-color 0.3s;
         }
 
         input[type="submit"]:hover {
-            background-color:blue;
+            background-color: #0056b3;
         }
     </style>
+</body>
 <body>
     <form action="pessoaControle.php" method="post">
-        <label for="nome">Nome </label>
-        <input type="text" name="nome" id="nome">
-        <label for="idade">Idade </label>
-        <input type="idade" name="idade" id="idade">
-        <label for="cpf">Cpf </label>
-        <input type="text" name="cpf" id="cpf">
-        <label for="senha">Senha </label>
-        <input type="password" name="senha" id="senha">
-        <input type="text" name="acao" value="cadastrar" hidden>
-        <input type="submit" value="cadastrar">
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" id="nome" required>
+        <label for="idade">Idade:</label>
+        <input type="number" name="idade" id="idade" required> 
+        <label for="cpf">CPF:</label>
+        <input type="text" name="cpf" id="cpf" required>
+        <label for="senha">Senha:</label>
+        <input type="password" name="senha" id="senha" required>
+        <input type="hidden" name="acao" value="cadastrar">
+        <input type="submit" value="Cadastrar">
     </form>
 </body>
 </html>

@@ -41,7 +41,7 @@
     if (isset($_POST["acao"]) && $_POST["acao"] == "delete") {
         if (isset($_POST["id"])) {
             $id = $_POST["id"];
-            deleteUsuario($id); // Corrigido para 'deleteUsuario' em vez de 'deletUsuario'
+            deleteUsuario($id); 
             header("Location: Listar.php");
         }
     }

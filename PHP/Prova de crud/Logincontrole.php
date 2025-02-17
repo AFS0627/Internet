@@ -9,25 +9,26 @@ if (!file_exists($pathPessoaDAO)) {
 }
 include_once($pathPessoaDAO);
 
-
+// verifica se é post e obtem os dados
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
     $cpf = $_POST['cpf'] ?? '';
     $senha = $_POST['senha'] ?? '';
 
-    
+    //verifica se está preenchifo
     if (empty($cpf) || empty($senha)) {
         echo "<script>alert('Por favor, preencha todos os campos!'); window.location.href = 'login.php';</script>";
         exit();
+
     }
 
-    
+    //verifica se login existe
     if (!function_exists('login')) {
         die("Erro: A função 'login()' não foi encontrada no arquivo PessoaDAO.php.");
     }
-
+// tenta autentica
     $resultado = login($cpf, $senha);
-
+// caso bem sucedido manda pra listagem
     if ($resultado) {
         
         $_SESSION['usuario_id'] = $resultado['id']; 
