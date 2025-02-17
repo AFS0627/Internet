@@ -1,13 +1,10 @@
-CREATE DATABASE IF NOT EXISTS prova;
-USE prova;
+CREATE DATABASE ppi;
+USE ppi;
 
-CREATE TABLE IF NOT EXISTS usuario (
+CREATE TABLE usuarios (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    nome VARCHAR(255) NOT NULL,
-    idade VARCHAR(255) NOT NULL UNIQUE,
-    usuario VARCHAR(50) NOT NULL UNIQUE,
+    nome VARCHAR(100) NOT NULL,
+    idade VARCHAR(100) NOT NULL,
+    cpf VARCHAR(50) NOT NULL UNIQUE,
     senha VARCHAR(255) NOT NULL
 );
-
--- Inserindo dados iniciais
-

@@ -30,17 +30,17 @@
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 
-    function login($usuario, $senha) {
+    function login($cpf, $senha) {
         $db = conecta();
         
-        $sql = "SELECT * FROM usuario WHERE nome = ?"; // Corrigido 'usuario' para 'nome'
+        $sql = "SELECT * FROM usuario WHERE cpf = ?"; 
         $stmt = $db->prepare($sql);
-        $stmt->bindValue(1, $usuario);
+        $stmt->bindValue(1, $cpf);
         $stmt->execute();
         
         $resultado = $stmt->fetch(PDO::FETCH_ASSOC);
-
-        if ($resultado && password_verify($senha, $resultado['senha'])) { // Melhor prática: usar hash
+    
+        if ($resultado && $senha === $resultado['senha']) {
             return $resultado;
         } else {
             return false;
