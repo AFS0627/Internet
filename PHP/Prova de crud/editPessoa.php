@@ -1,18 +1,17 @@
-<?php
+<?php 
     include_once("Database.php");
     include_once("PessoaDAO.php");
 
     if (isset($_GET["pessoa_id"])) {
         $id2 = $_GET["pessoa_id"];
-        $pessoa = getCpf($id2);
+        $pessoa = getUsuarioById($id2); // Alterado para getUsuarioById
     } else {
         die("Pessoa não encontrada");
     }
-
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,24 +19,23 @@
     <style>
         body {
             display: flex;
-            justify-content: center; 
-            align-items: center; 
-            min-height: 100vh; 
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
             margin: 0;
-            background-color:white; 
+            background-color: white;
             font-family: Arial, sans-serif;
         }
 
         h2 {
-            align-self: flex-start; 
-            margin-left: 20px; 
-            font-size: 1.8em; 
-            font-weight: bold; 
+            text-align: center;
+            font-size: 1.8em;
+            font-weight: bold;
         }
 
         fieldset {
             width: 100%;
-            max-width: 500px; 
+            max-width: 500px;
             padding: 20px;
             border: 2px solid #ccc;
             border-radius: 8px;
@@ -58,20 +56,19 @@
         }
 
         input[type="text"],
-        input[type="idade"],
+        input[type="number"],
         input[type="password"] {
-            width: 100%; 
+            width: 100%;
             padding: 10px;
-            margin-bottom: 15px; 
+            margin-bottom: 15px;
             border: 1px solid #ccc;
             border-radius: 4px;
             font-size: 1em;
         }
 
-        input[type="submit"] {
-            width: 100%; 
+        input[type="submit"], .delete-btn {
+            width: 100%;
             padding: 12px;
-            background-color:blue; 
             color: white;
             border: none;
             border-radius: 4px;
@@ -80,17 +77,17 @@
             transition: background-color 0.3s;
         }
 
+        input[type="submit"] {
+            background-color: blue;
+        }
+
         input[type="submit"]:hover {
-            background-color:blue;  
+            background-color: darkblue;
         }
 
         .delete-btn {
             background-color: red;
-            color: white;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
+            margin-top: 10px;
         }
 
         .delete-btn:hover {
@@ -102,15 +99,19 @@
 
 <h2>Editar Pessoa</h2>
 <form action="pessoaControle.php" method="post">
-    <input type="hidden" name="id" value="<?php echo $pessoa['id']; ?>">
+    <input type="hidden" name="id" value="<?php echo htmlspecialchars($pessoa['id']); ?>">
+
     <label for="nome">Nome: </label>
-    <input type="text" name="nome" value="<?php echo $pessoa['nome']; ?>" required>
+    <input type="text" name="nome" value="<?php echo htmlspecialchars($pessoa['nome']); ?>" required>
+
     <label for="idade">Idade: </label>
-    <input type="idade" name="idade" value="<?php echo $pessoa['idade']; ?>" required>
-    <label for="cpf">Cpf: </label>
-    <input type="text" name="cpf" value="<?php echo $pessoa['cpf']; ?>" required>
+    <input type="number" name="idade" value="<?php echo htmlspecialchars($pessoa['idade']); ?>" required>
+
+    <label for="cpf">CPF: </label>
+    <input type="text" name="cpf" value="<?php echo htmlspecialchars($pessoa['cpf']); ?>" required>
+
     <label for="senha">Senha: </label>
-    <input type="password" name="senha" value="<?php echo $pessoa['senha']; ?>" required>
+    <input type="password" name="senha" value="<?php echo htmlspecialchars($pessoa['senha']); ?>" required>
 
     <input type="hidden" name="acao" value="editar">
     <input type="submit" value="Salvar alterações">

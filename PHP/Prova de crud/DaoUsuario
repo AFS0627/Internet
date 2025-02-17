@@ -36,7 +36,8 @@ function getUser($id){
 }
 function insertUser($nome, $idade, $senha){
     $conn = conectar();
-    $sql = "INSERT INTO usuarios (nome, idade, senha) VALUES (:nome, :idade, :senha, NOW())";
+    $sql = "INSERT INTO usuarios (nome, idade, senha) VALUES (:nome, :idade, :senha)";
+
     $stmt = $conn->prepare($sql);
     $stmt->bindParam(':nome', $nome);
     $stmt->bindParam(':idade', $idade);
@@ -47,7 +48,7 @@ function insertUser($nome, $idade, $senha){
 }
 function updateUser($id, $nome, $idade, $senha){
     $conn = conectar();
-    $sql = "UPDATE usuarios SET nome = :nome, cpf = :cpf, senha = :senha WHERE id = :id";
+    $sql = "UPDATE usuarios SET nome = :nome, idade = :idade, senha = :senha WHERE id = :id";
     $stmt = $conn->prepare($sql);
     $stmt->bindParam(':id', $id);
     $stmt->bindParam(':nome', $nome);
