@@ -6,7 +6,7 @@
     ini_set('display_startup_errors', 1);
     error_reporting(E_ALL);
 
-    // Cadastro de usuário
+    // Cadastrara
     if (isset($_POST["acao"]) && $_POST["acao"] == "cadastrar") {
         if (isset($_POST["nome"]) && isset($_POST["idade"]) && isset($_POST["cpf"]) && isset($_POST["senha"])) {
             $nome = $_POST["nome"];
@@ -21,7 +21,7 @@
         }
     }
 
-    // Edição de usuário
+    // Editar
     if (isset($_POST["acao"]) && $_POST["acao"] == "editar") {
         if (isset($_POST["id"]) && isset($_POST["nome"]) && isset($_POST["idade"]) && isset($_POST["cpf"]) && isset($_POST["senha"])) {
             $id = $_POST["id"];
@@ -37,7 +37,7 @@
         }
     }
 
-    // Exclusão de usuário
+    // Excluir
     if (isset($_POST["acao"]) && $_POST["acao"] == "delete") {
         if (isset($_POST["id"])) {
             $id = $_POST["id"];
