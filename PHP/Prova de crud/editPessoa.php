@@ -23,14 +23,14 @@
             align-items: center;
             min-height: 100vh;
             margin: 0;
-            background-color: #e6f3ff; 
+            background-color: light blue; 
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         h2 {
             text-align: center;
             font-size: 2em;
-            color: #333;
+            color: black;
             margin-bottom: 30px;
         }
 
@@ -55,7 +55,7 @@
             display: block;
             margin-bottom: 10px;
             font-size: 1.1em;
-            color: #333;
+            color: black;
         }
 
         input[type="text"],
@@ -73,7 +73,7 @@
         input[type="text"]:focus,
         input[type="number"]:focus,
         input[type="password"]:focus {
-            border-color: #007BFF;
+            border-color: blue;
             outline: none;
         }
 
@@ -89,20 +89,20 @@
         }
 
         input[type="submit"] {
-            background-color: #007BFF;
+            background-color: blue;
             margin-bottom: 10px;
         }
 
         input[type="submit"]:hover {
-            background-color: #0056b3;
+            background-color: blue;
         }
 
         .delete-btn {
-            background-color: #FF4136;
+            background-color: red;
         }
 
         .delete-btn:hover {
-            background-color: #D50F00;
+            background-color: red;
         }
     </style>
 </head>

@@ -11,7 +11,7 @@
             align-items: center; 
             min-height: 100vh; 
             margin: 0;
-            background-color: #f0f8ff; 
+            background-color: gray; 
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
@@ -21,7 +21,7 @@
             padding: 30px;
             border: none;
             border-radius: 15px;
-            background-color: #ffffff;
+            background-color: white;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
 
@@ -47,14 +47,14 @@
         input[type="text"]:focus,
         input[type="number"]:focus,
         input[type="password"]:focus {
-            border-color: #007BFF;
+            border-color: blue;
             outline: none;
         }
 
         input[type="submit"] {
             width: 100%; 
             padding: 15px;
-            background-color: #007BFF;
+            background-color: blue;
             color: white;
             border: none;
             border-radius: 6px;
@@ -64,7 +64,7 @@
         }
 
         input[type="submit"]:hover {
-            background-color: #0056b3;
+            background-color: blue;
         }
     </style>
 </body>

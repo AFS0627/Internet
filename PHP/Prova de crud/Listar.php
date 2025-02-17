@@ -12,7 +12,7 @@
 
         h2 {
             text-align: center;
-            color: #333;
+            color: black;
             font-size: 2em;
             margin-bottom: 30px;
         }
@@ -31,7 +31,7 @@
         }
 
         th {
-            background-color: #007BFF;
+            background-color: blue;
             color: white;
             text-align: center;
         }
@@ -41,7 +41,7 @@
         }
 
         a {
-            color: #007BFF;
+            color: blue;
             text-decoration: none;
         }
 
